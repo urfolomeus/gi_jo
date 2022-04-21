@@ -3,7 +3,7 @@ import Config
 # Configure your database
 config :gi_jo, GiJo.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "s3cr3t",
   hostname: "localhost",
   database: "gi_jo_dev",
   show_sensitive_data_on_connection_error: true,
