@@ -1,4 +1,7 @@
 defmodule GiJoWeb.Telemetry do
+  @moduledoc """
+  Setup file for Telemetry
+  """
   use Supervisor
   import Telemetry.Metrics
 
