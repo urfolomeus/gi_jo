@@ -9,13 +9,13 @@ jobs:
       mysqldb:
         image: mysql:5.7
         env:
-          MYSQL_USER: dicksonone-api
-          MYSQL_PASSWORD: dicksonone-api
+          MYSQL_USER: "dicksonone-api"
+          MYSQL_PASSWORD: "dicksonone-api"
           MYSQL_ALLOW_EMPTY_PASSWORD: "true"
     container:
       image: elixir:1.13.4-alpine
     env:
-      MIX_ENV: test
+      MIX_ENV: "test"
     steps:
       - uses: actions/checkout@v2
       - run: apk update
