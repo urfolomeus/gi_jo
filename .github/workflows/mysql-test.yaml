@@ -9,7 +9,6 @@ jobs:
       mysqldb:
         image: mysql:5.7
         env:
-          MYSQL_DATABASE: dicksonone_api_test
           MYSQL_USER: dicksonone-api
           MYSQL_PASSWORD: dicksonone-api
           MYSQL_ALLOW_EMPTY_PASSWORD: "true"
@@ -20,5 +19,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: apk update
-      - run: apk add bash mysql-client
+      - run: apk add bash git mysql-client openssl
       - run: mysql -h mysqldb -u root < docker/provision/mysql/01-databases.sql
